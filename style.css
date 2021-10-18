@@ -15,13 +15,13 @@ body {
 .main-header {
   background-color: #f7f7f7;
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 nav {
   font-size: 18px;
 }
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 .post-header {
   margin-bottom: 40px;
@@ -186,6 +186,8 @@ header {
   font-weight: normal;
   font-style: italic;
 }
+
+/* Flex Box Layout
 .row {
   display: flex;
   align-items: flex-start;
@@ -198,4 +200,24 @@ article {
 }
 aside {
   flex: 0 0 300px;
+}
+*/
+
+/* Css grid layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+.main-header {
+  grid-column: 1 / -1;
+}
+article {
+}
+aside {
+}
+footer {
+  grid-column: 1 / -1;
 }
