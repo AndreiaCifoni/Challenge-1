@@ -41,10 +41,21 @@
 
         /* CSS GRID */
         display: grid;
-        grid-template-columns: 200px 200px 100px 100px;
-        grid-template-rows: 300px 200px;
-        column-gap: 30px;
-        row-gap: 60px;
+        /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 40px;
+      }
+      .el--8 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      .el--2 {
+        /*grid-column: 1 / -1 ((o -1 faz aumentar ate o final ));*/
+        /*grid-column: 1 / span 3 ((posso usar o termo span pra falar quantos ele vai ocupar)); */
+        grid-column: 1 / -1;
+        grid-row: 2;
       }
 
       .container--2 {
@@ -69,7 +80,7 @@
       <div class="el el--4">(4) are</div>
       <div class="el el--5">(5) amazing</div>
       <div class="el el--6">(6) languages</div>
-      <div class="el el--7">(7) to</div>
+      <!-- <div class="el el--7">(7) to</div> -->
       <div class="el el--8">(8) learn</div>
     </div>
 
